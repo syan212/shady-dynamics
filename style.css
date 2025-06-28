@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'HackerFont';
+  src: url('fonts/hacker.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik-regular';
+  src: url('fonts/rubik-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik-bold';
+  src: url('fonts/rubik-bold.ttf') format('truetype');
+}
+
+.hackerfont {
+  font-family: 'HackerFont', sans-serif;
+}
+
+.rubik-regular {
+  font-family: 'Rubik-regular', serif;
+}
+
+.rubik-bold {
+  font-family: 'Rubik-bold', serif;
+}
+
+
+.red {
+    color: red;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.link1 {
+  top: 0px;
+  right: 200px;
+}

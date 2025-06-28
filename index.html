@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shady Dynamics</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="i-style.css">
+  <script src="scripts.js"></script>
+  <script>
+    if (sessionStorage.getItem('authenticated') !== 'true') {
+      window.location.href = 'password.html';
+    }
+
+    function buttontest() {
+      alert("I don't think I need to say this but this is a button test. If you see this, the button works as expected.");
+    }
+
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";  
+      }
+      tablinks = document.getElementsByClassName("tab");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";  
+      evt.currentTarget.className += " active";
+    }
+  </script>
+</head>
+<body class="rubik-regular">
+  <div class="content">
+    <h1>Shady Dynamics</h1>
+    <p class="">Version 1.0.0</p>
+    <p class="hackerfont">Placeholder</p>
+    <p class="rubik-regular">Rubik Regular Font</p>
+    <p class="rubik-bold">Rubik Bold Font</p>
+    <p>Lorem Ipsum Dolor Sit Amet</p>
+    <button style="background-color: chartreuse;" onclick="buttonLink('/systemSites/404.html')">This is a button test</button>
+    <button class="" style="background-color: rgb(255, 217, 0);" onclick="buttonLink('/systemSites/404.html')">This is a tab test</button>
+    <br>
+    <p id="output-test">This is a output test.</p>
+    <input type="text" placeholder="This is a text input" style="background-color: lightblue; color: black; font-family: 'Rubik', sans-serif; font-size: 16px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+  </div>
+  <p class="tab-container" style="position: fixed; top: 0; background-color: white; width: 100%; z-index: 1000;">
+    <span class="tab" onclick="openTab(event, 'tab1')">TabTest 1</span>
+    <span class="tab" onclick="openTab(event, 'tab2')">TabTest 2</span>
+    <span class="tab" onclick="openTab(event, 'tab3')">TabTest 3</span>
+  </p>
+  <button style="background-color: red;" onclick="showAdminPrompt()">ShowPrompt</button>
+
+</body>
+</html>
