@@ -1,7 +1,6 @@
 async function submitPassword() {
   try{
-    console.log('Start');
-    const entered_password = prompt('Enter');
+    const entered_password = document.getElementById('password_field').value;
     if (!entered_password) return;
     const response = await fetch('/.netlify/functions/compare-hash', {
       method: 'POST',
