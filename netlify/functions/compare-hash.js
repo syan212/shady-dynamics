@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
