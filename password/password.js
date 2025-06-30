@@ -14,7 +14,7 @@ async function submitPassword() {
     if (match){
       alert('Correct Password!');
       sessionStorage.setItem('authenticated', 'true');
-      window.location.href = 'index.html';
+      window.location.href = '/index.html';
     }
     else{
       alert('Wrong Password');
