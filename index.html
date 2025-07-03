@@ -8,32 +8,43 @@
     <link rel="stylesheet" href="i-style.css">
     <script src="scripts.js"></script>
     <script>
+
         if (sessionStorage.getItem('authenticated') !== 'true') {
-          window.location.href = 'password/password.html';
+        	window.location.href = 'password/password.html';
         }
 
         function buttontest() {
-          alert("I don't think I need to say this but this is a button test. If you see this, the button works as expected.");
+        	alert("I don't think I need to say this but this is a button test. If you see this, the button works as expected.");
         }
 
         function openTab(evt, tabName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";  
-          }
-          tablinks = document.getElementsByClassName("tab");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(tabName).style.display = "block";  
-          evt.currentTarget.className += " active";
-        }
+        	var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";  
+			}
+			tablinks = document.getElementsByClassName("tab");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			try{
+				document.getElementById(tabName).style.display = "block";  
+			}
+			catch (error){
+				console.error("This tab's content doesn't exist");
+			}
+			evt.currentTarget.className += " active";
+		}
     </script>
 </head>
 <body class="rubik-regular">
-    <div class="content">
+	<div class="tab-container" style="background-color: white; width: 100%; z-index: 1000;">
         <h1>Shady Dynamics</h1>
+		<span class="tab" id="tab1" onclick="openTab(event, 'tab1-content')">TabTest 1</span>
+        <span class="tab" id="tab2" onclick="openTab(event, 'tab2-content')">TabTest 2</span>
+        <span class="tab" id="tab3" onclick="openTab(event, 'tab3-content')">TabTest 3</span>
+    </div>
+    <div class="content">
         <p class="">Version 1.0.0</p>
         <p class="hackerfont">Placeholder</p>
         <p class="rubik-regular">Rubik Regular Font</p>
@@ -45,10 +56,5 @@
         <p id="output-test">This is a output test.</p>
         <input type="text" placeholder="This is a text input" style="background-color: lightblue; color: black; font-family: 'Rubik', sans-serif; font-size: 16px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
     </div>
-    <p class="tab-container" style="position: fixed; top: 0; background-color: white; width: 100%; z-index: 1000;">
-        <span class="tab" onclick="openTab(event, 'tab1')">TabTest 1</span>
-        <span class="tab" onclick="openTab(event, 'tab2')">TabTest 2</span>
-        <span class="tab" onclick="openTab(event, 'tab3')">TabTest 3</span>
-    </p>
 </body>
 </html>
