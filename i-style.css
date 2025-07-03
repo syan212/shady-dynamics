@@ -22,9 +22,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
     border: none;
-    border-top: solid black 0.1em;
-    border-left: solid black 0.06em;
-    border-right: solid black 0.06em;
 }
 
 .tab:hover {
