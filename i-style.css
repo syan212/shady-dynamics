@@ -1,14 +1,18 @@
 .tab-container {
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
     top: 0;
     left: 0;
     right: 0;
-    height: 50px; 
+    height: 1em; 
     background-color: #f1f1f1; 
     border-bottom: 1px solid #ccc;
     z-index: 1000; 
+    padding-block: 1.1em;
+    margin-block: 1em;
 }
 
 .tab {
@@ -29,4 +33,13 @@
 
 .tab.active {
     background-color: #ccc; 
+}
+
+h1{
+    margin: 0%;
+    margin-right: 0.25em;
+}
+
+.content{
+    margin-top: 1.1em;
 }
