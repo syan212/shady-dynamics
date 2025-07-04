@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", function(){
-	const test_page = document.getElementById('test-page');
-  	test_page.click();
+	const info = document.getElementById('info');
+  	info.click();
 });
 
 
