@@ -3,7 +3,6 @@ window.addEventListener("DOMContentLoaded", function(){
   	info.click();
 });
 
-
 function buttontest() {
     alert("I don't think I need to say this but this is a button test. If you see this, the button works as expected.");
 }
