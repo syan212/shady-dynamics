@@ -11,9 +11,13 @@
 <body class="rubik-regular">
 	<div class="tab-container" style="background-color: white; width: 100%; z-index: 1000;">
         <h1>Shady Dynamics</h1>
+        <span class="tab" id="info" onclick="openTab(event, 'info-content')">What is Shady Dynamics?</span>
 		<span class="tab" id="test-page" onclick="openTab(event, 'test-page-content')">Test Page</span>
         <span class="tab" id="tab2" onclick="openTab(event, 'tab2-content')">TabTest 2</span>
-        <span class="tab" id="tab3" onclick="openTab(event, 'tab3-content')">TabTest 3</span>
+    </div>
+    <div class="tabcontent" id="info-content">
+        <h2>What is Shady Dynamics?</h2>
+        <p>Shady Dynamics is a fun project we are working on.</p>
     </div>
     <div class="tabcontent" id="test-page-content">
         <p class="">Version 1.0.0</p>
@@ -29,3 +33,4 @@
     </div>
 </body>
 </html>
+
