@@ -12,12 +12,22 @@
 	<div class="tab-container" style="background-color: white; width: 100%; z-index: 1000;">
         <h1>Shady Dynamics</h1>
         <span class="tab" id="info" onclick="openTab(event, 'info-content')">What is Shady Dynamics?</span>
-		<span class="tab" id="test-page" onclick="openTab(event, 'test-page-content')">Test Page</span>
-        <span class="tab" id="tab1" onclick="openTab(event, 'tab1-content')">Tab 1</span>
+		<span class="tab" id="file-download" onclick="openTab(event, 'file-download-content')">File Download</span>
+        <span class="tab" id="test-page" onclick="openTab(event, 'test-page-content')">Test Page</span>
     </div>
     <div class="tabcontent" id="info-content">
         <h2>What is Shady Dynamics?</h2>
         <p>Shady Dynamics is a fun project we are working on.</p>
+    </div>
+    <div class="tabcontent" id="file-download-content">
+        <div class="file-card">
+            <img src="file.png">
+            <a href="/scripts.js" download>Download script.js</a>
+        </div>
+        <div class="file-card">
+            <img src="file.png">
+            <a href="/404.html" download>Download 404.html</a>
+        </div>
     </div>
     <div class="tabcontent" id="test-page-content">
         <p class="">Version 1.0.0</p>
@@ -33,5 +43,3 @@
     </div>
 </body>
 </html>
-
-
