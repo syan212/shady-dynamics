@@ -18,7 +18,12 @@ function openTab(evt, tabName) {
 		tablinks[i].className = tablinks[i].className.replace(" active", "");
 	}
 	try{
-		document.getElementById(tabName).style.display = "block";  
+		if (tabName == 'file-download-content'){
+			document.getElementById(tabName).style.display = "flex"; 
+		}
+		else{
+			document.getElementById(tabName).style.display = "block"; 
+		} 
 	}
 	catch (error){
 		console.error("This tab's content doesn't exist");
