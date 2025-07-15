@@ -1,3 +1,7 @@
+if (sessionStorage.getItem('authenticated') !== 'true') {
+    window.location.href = 'password/password.html';
+}
+
 window.addEventListener("DOMContentLoaded", function(){
 	const info = document.getElementById('info');
   	info.click();
